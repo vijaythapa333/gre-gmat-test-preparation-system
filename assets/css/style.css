@@ -1,0 +1,265 @@
+/*
+Theme Name: Test Preparation App Ro Beyond Boundaries
+Author: VIjay Thapa
+Author URI: http://www.vijaythapa.com.np
+Version: 1.0
+*/
+/*CSS FOR ALL*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: arial, sans-serif;
+    line-height: 25px;
+}
+
+.wrapper{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/*CSS for Header*/
+.header{
+    background-color: #006400;
+    color: #FFFFFF;
+}
+.header .wrapper .logo{
+    width: 20%;
+    float: left;
+}
+.header .wrapper .logo img{
+    width: 100%;
+}
+.header .wrapper .head-title{
+    width: 80%;
+}
+.header .wrapper .head-title h1{
+    font-weight: lighter;
+    line-height: 60px;
+    text-align: center;
+}
+
+/*CSS for Navigation*/
+.menu .wrapper ul{
+    list-style-type: none;
+}
+.menu .wrapper ul a{
+    color: #006400;
+    text-decoration: none;
+    padding: 1%;
+}
+.menu .wrapper ul a:hover{
+    background-color: #006400;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+.menu .wrapper ul li{
+    display: inline;
+}
+
+/*CSS for Main*/
+.main{
+    margin: 2% 0;
+}
+.main .content{
+    border: 1px solid silver;
+    width: 80%;
+    padding: 1%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px silver;
+}
+.main .content .welcome{
+    margin: 2% auto;
+    text-align: center;
+    font-size: 120%;
+    line-height: 50px;
+}
+ .heavy{
+    color: #b73a00;
+    font-weight: bold;
+}
+.dash-tile{
+    width: 21%;
+    background-color: #E65D5D;
+    color: #FFFFFF;
+    margin: 1%;
+    padding: 5% 1%;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    cursor: pointer;
+}
+.dash-tile:hover{
+    box-shadow: 0 0 5px 1px black;
+}
+.success{
+    border: 1px solid #388E3C;
+    background-color: #AED581;
+    color: #388E3C;
+    font-size: 90%;
+    padding: 1%;
+    margin: 1%;
+}
+.error{
+    border: 1px solid #B71C1C;
+    background-color: #E57373;
+    color: ;
+    font-size: 90%;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* CSS FOR REPORT*/
+.main .content .report{
+    color: #4f4d4d;
+    line-height: 50px;
+}
+.main .content .report table{
+    width: 100%;
+    margin: 1% 0;
+    text-align: left;
+}
+.main .content .report table tr td{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding:  1% 0;
+}
+.main .content .report .forms{
+    padding: 2%;
+    line-height: 40px;
+}
+.main .content .report .forms .name{
+    width: 15%;
+    float: left;
+}
+.main .content .report .forms h2{
+    margin-bottom: 2%;
+}
+.main .content .report .forms input[type='text'],.main .content .report .forms input[type='email'],
+.main .content .report .forms input[type='tel'],.main .content .report .forms input[type='num']{
+    padding: 0.5%;
+    width: 30%;
+}
+.main .content .report .forms select{
+    width: 31.5%;
+    padding: 1%;
+}
+
+.login{
+    width: 20%;
+    padding: 1%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px silver;
+}
+.login input[type='text'],.login input[type='password']{
+    padding: 1%;
+    width: 97%;
+    margin: 1% 0;
+    font-size: 100%;
+}
+.login input[type='submit'],.login input[type='reset']{
+    width: 100%;
+    margin: 1% 0;
+    height: 40px;
+}
+.login h2{
+    color: #4f4d4d;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+
+/*CSS FOR BUTTONS*/
+.btn-go{
+    background-color: #00b72a;
+    color: #FFFFFF;
+    font-size: 100%;
+    font-weight: normal;
+    padding: 1%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-go:hover{
+    background-color: #01721b;
+}
+
+.btn-exit{
+    background-color: #9e0303;
+    color: #FFFFFF;
+    font-size: 100%;
+    font-weight: normal;
+    padding: 1%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-exit:hover{
+    background-color: #720202;
+}
+
+.btn-add{
+    background-color: #085be0;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-add:hover{
+    background-color: #074fc1;
+}
+
+.btn-update{
+    background-color: #00b72a;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-update:hover{
+    background-color: #01721b;
+}
+.btn-delete{
+    background-color: #9e0303;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-delete:hover{
+    background-color: #720202;
+}
+/*CSS for Footer*/
+.footer{
+    background-color: #006400;
+    color: #FFFFFF;
+}
+.footer p{
+    text-align: center;
+}
+.footer p a{
+    color: #A1CD3C;
+    text-decoration: none;
+}
+.footer p a:hover{
+    color: #F5E923;
+}
