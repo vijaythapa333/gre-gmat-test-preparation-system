@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <!--Meta Tags Starts Here-->
-        <meta charset="UTF-8" />
-        <meta name="author" content="Beyond Boundaries" />
-        <meta name="description" content="Test Preparation Portal For Beyond Boundaries." />
-        <meta name="keywords" content="Test Preaparation, Beyond Boundaries, Online Portal, Kathmandu, Nepal" />
-        <!--Meta Tags Ends Here-->
-        <title>Online Test Preparation Portal - Beyond Boundaries</title>
-        
-        <!--CSS File Starts Here-->
-        <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-        <!--CSS File Ends Here-->
-    </head>
-    
-    <body>
-        <!--Header Starts Here-->
-        <header class="header">
-            <div class="wrapper clearfix">
-                <div class="logo">
-                    <img src="../images/logo.jpg" alt="Beyond Boundaries" title="Beyond Boundaries" />
-                </div>
-                
-                <div class="head-title">
-                    <h1>Online Test Preparation Portal</h1>
-                </div>
-            </div>
-        </header>
-        <!--Header Ends Here-->
-        
-        <!--Navigation Starts Here-->
-        <nav class="menu">
-            <div class="wrapper">
-                <ul>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="users.html"><li>Users</li></a>
-                    <a href="categories.html"><li>Categories</li></a>
-                    <a href="questions.html"><li>Questions</li></a>
-                    <a href="results.html"><li>Results</li></a>
-                    <a href="#"><li>Log Out</li></a>
-                </ul>
-            </div>
-        </nav>
-        <!--Navigation Ends Here-->
-        
-        <!--Body Starts Here-->
+<!--Body Starts Here-->
         <div class="main">
             <div class="content">
                 <div class="report">
@@ -103,15 +57,3 @@
             </div>
         </div>
         <!--Body Ends Here-->
-        
-        <!--Footer Starts Here-->
-        <footer class="footer">
-            <div class="wrapper">
-                <p>
-                    <a href="#" title="Beyond Boundaries">Beyond Boundaries</a> &copy; 2017. All Rights Reserved.    
-                    Powered by <a href="#" title="Quality Service Provider">Hamro Technology Pvt. Ltd</a>.
-                </p>
-            </div>
-        </footer>
-        <!--Footer Ends Here-->
-</html>
