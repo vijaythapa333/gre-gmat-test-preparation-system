@@ -5,8 +5,15 @@
                     
                     <form method="post" action="" class="forms">
                         <h2>Add Question</h2>
+                        <?php 
+                            if(isset($_SESSION['add']))
+                            {
+                                echo $_SESSION['add'];
+                                unset($_SESSION['add']);
+                            }
+                        ?>
                         <span class="name">Question</span> 
-                        <input type="text" name="question" placeholder="Question" required="true" /> <br />
+                        <textarea name="question" placeholder="Add Your Question" required="true"></textarea> <br />
                         
                         <span class="name">First Answer</span>
                         <input type="text" name="first_answer" placeholder="First Answer" required="true" /><br />
@@ -19,12 +26,7 @@
                         
                         <span class="name">Fourth Answer</span>
                         <input type="text" name="fourth_answer" placeholder="Fourth Answer" required="true" /><br />
-                        
-                        <span class="name">Gender</span>
-                        <input type="radio" name="gender" value="male" /> Male 
-                        <input type="radio" name="gender" value="female" /> Female 
-                        <input type="radio" name="gender" value="other" /> Other
-                        <br />
+                       
                         
                         <span class="name">Answer</span>
                         <select name="answer">
@@ -37,9 +39,31 @@
                         
                         <span class="name">Faculty</span>
                         <select name="faculty">
-                            <option value="GRE">GRE</option>
-                            <option value="GMAT">GMAT</option>
-                            <option value="TOEFL">TOEFL</option>
+                            <?php 
+                                //Get Faculties from database
+                                $tbl_name="tbl_faculty";
+                                $query=$obj->select_data($tbl_name);
+                                $res=$obj->execute_query($conn,$query);
+                                $count_rows=$obj->num_rows($res);
+                                if($count_rows>0)
+                                {
+                                    while($row=$obj->fetch_data($res))
+                                    {
+                                        $faculty_id=$row['faculty_id'];
+                                        $faculty_name=$row['faculty_name'];
+                                        ?>
+                                        <option value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
+                                        <?php
+                                    }
+                                }
+                                else
+                                {
+                                    ?>
+                                    <option value="0">Uncategorized</option>
+                                    <?php
+                                }
+                            ?>
+                            
                         </select>
                         <br />
                         
@@ -49,8 +73,57 @@
                         <br />
                         
                         <input type="submit" name="submit" value="Add Question" class="btn-add" style="margin-left: 15%;" />
-                        <button type="button" class="btn-delete">Cancel</button>
+                        <a href="<?php echo SITEURL; ?>admin/index.php?page=questions"><button type="button" class="btn-delete">Cancel</button></a>
                     </form>
+                    
+                    <?php 
+                        if(isset($_POST['submit']))
+                        {
+                            //echo "Clicked";
+                            //Get all values from the forms
+                            $question=$obj->sanitize($conn,$_POST['question']);
+                            $first_answer=$obj->sanitize($conn,$_POST['first_answer']);
+                            $second_answer=$obj->sanitize($conn,$_POST['second_answer']);
+                            $third_answer=$obj->sanitize($conn,$_POST['third_answer']);
+                            $fourth_answer=$obj->sanitize($conn,$_POST['fourth_answer']);
+                           
+                            $faculty=$obj->sanitize($conn,$_POST['faculty']);
+                            if(isset($_POST['is_active']))
+                            {
+                                $is_active=$_POST['is_active'];
+                            }
+                            else
+                            {
+                                $is_active='yes';
+                            }
+                            $answer=$obj->sanitize($conn,$_POST['answer']);
+                            $added_date=date('Y-m-d');
+                            
+                            $tbl_name='tbl_question';
+                            $data="question='$question',
+                                    first_answer='$first_answer',
+                                    second_answer='$second_answer',
+                                    third_answer='$third_answer',
+                                    fourth_answer='$fourth_answer',
+                                    answer='$answer',
+                                    faculty='$faculty',
+                                    is_active='$is_active',
+                                    added_date='$added_date',
+                                    updated_date=''";
+                            $query=$obj->insert_data($tbl_name,$data);
+                            $res=$obj->execute_query($conn,$query);
+                            if($res===true)
+                            {
+                                $_SESSION['add']="<div class='success'>Question successfully added.</div>";
+                                header('location:'.SITEURL.'admin/index.php?page=questions');
+                            }
+                            else
+                            {
+                                $_SESSION['add']="<div class='error'>Failed to add question. Try again.</div>";
+                                header('location:'.SITEURL.'admin/index.php?page=add_question');
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>

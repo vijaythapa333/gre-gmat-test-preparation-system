@@ -91,5 +91,12 @@
             $remove=unlink($path);
             return $remove;
         }
+        public function get_total_rows($tbl_name,$conn)
+        {
+            $query="SELECT * FROM $tbl_name";
+            $res=mysqli_query($conn,$query) or die(mysqli_error($conn));
+            $rows=mysqli_num_rows($res);
+            return $rows;
+        }
     }
 ?>

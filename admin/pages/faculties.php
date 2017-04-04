@@ -2,36 +2,36 @@
         <div class="main">
             <div class="content">
                 <div class="report">
-                    <h2>Question Manager</h2>
-                        <a href="<?php echo SITEURL; ?>admin/index.php?page=add_question">
-                            <button type="button" class="btn-add">Add Question</button>
-                        </a>
-                        <?php 
-                            if(isset($_SESSION['add']))
-                            {
-                                echo $_SESSION['add'];
-                                unset($_SESSION['add']);
-                            }
-                            if(isset($_SESSION['update']))
+                    <h2>Faculty Manager</h2>
+                    <a href="<?php echo SITEURL; ?>admin/index.php?page=add_faculty">
+                        <button type="button" class="btn-add">Add Faculty</button>
+                    </a>
+                    <?php 
+                        if(isset($_SESSION['add']))
+                        {
+                            echo $_SESSION['add'];
+                            unset($_SESSION['add']);
+                        }
+                        if(isset($_SESSION['update']))
                             {
                                 echo $_SESSION['update'];
                                 unset($_SESSION['update']);
                             }
-                        ?>
-                
+                    ?>
+                    
                     <table>
                         <tr>
                             <th>S.N.</th>
-                            <th>Question</th>
-                            <th>Answer</th>
-                            <th>Faculty</th>
+                            <th>Faculty Title</th>
+                            <th>Time Duration</th>
+                            <th>Qns Per Exam</th>
                             <th>Is Active?</th>
                             <th>Actions</th>
                         </tr>
                         
                         <?php 
-                            //Getting Data From Database
-                            $tbl_name="tbl_question ORDER BY question_id DESC";
+                            //Getting all the faculties from database
+                            $tbl_name="tbl_faculty ORDER BY faculty_id DESC";
                             $query=$obj->select_data($tbl_name);
                             $res=$obj->execute_query($conn,$query);
                             $count_rows=$obj->num_rows($res);
@@ -40,20 +40,20 @@
                             {
                                 while($row=$obj->fetch_data($res))
                                 {
-                                    $question_id=$row['question_id'];
-                                    $question=$row['question'];
-                                    $answer=$row['answer'];
-                                    $faculty=$row['faculty'];
+                                    $faculty_id=$row['faculty_id'];
+                                    $faculty_name=$row['faculty_name'];
+                                    $time_duration=$row['time_duration'];
+                                    $qns_per_page=$row['qns_per_set'];
                                     $is_active=$row['is_active'];
                                     ?>
                                     <tr>
                                         <td><?php echo $sn++; ?>. </td>
-                                        <td><?php echo $question; ?></td>
-                                        <td><?php echo $answer; ?></td>
-                                        <td><?php echo $faculty; ?></td></td>
+                                        <td><?php echo $faculty_name; ?></td>
+                                        <td><?php echo $time_duration; ?></td>
+                                        <td><?php echo $qns_per_page; ?></td>
                                         <td><?php echo $is_active; ?></td>
                                         <td>
-                                            <a href="<?php echo SITEURL; ?>admin/index.php?page=update_question&id=<?php echo $question_id; ?>"><button type="button" class="btn-update">UPDATE</button></a> 
+                                            <a href="<?php echo SITEURL; ?>admin/index.php?page=update_faculty&id=<?php echo $faculty_id; ?>"><button type="button" class="btn-update">UPDATE</button></a> 
                                             <a href="#"><button type="button" class="btn-delete">DELETE</button></a>
                                         </td>
                                     </tr>
@@ -62,9 +62,10 @@
                             }
                             else
                             {
-                                echo "<tr><td colspan='6'><div class='error'></div></td></tr>";
+                                echo "<tr><td colspan='6'><div class='error'>No faculties added.</div></td></tr>";
                             }
                         ?>
+                        
                         
                     </table>
                 </div>

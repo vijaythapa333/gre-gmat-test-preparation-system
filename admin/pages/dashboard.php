@@ -4,31 +4,33 @@
                 <div class="report">
                     <h2><u>Dash Board</u></h2>
                     
-                    <div class="success">
-                        This is Success Message Style.
-                    </div>
-                    <div class="error">
-                        This is Error Message Style.
-                    </div>
+                    <?php 
+                        if(isset($_SESSION['success']))
+                        {
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                        }
+                    ?>
                     
                     <div class="clearfix">
                         <a href="<?php echo SITEURL; ?>admin/index.php?page=students">
                             <div class="dash-tile">
-                                <h1>100</h1>
+                                
+                                <h1><?php echo $obj->get_total_rows('tbl_student',$conn); ?></h1>
                                 <span>Students</span>
                             </div>
                         </a>
                         
-                        <a href="<?php echo SITEURL; ?>admin/index.php?page=categories">
+                        <a href="<?php echo SITEURL; ?>admin/index.php?page=faculties">
                             <div class="dash-tile">
-                                <h1>03</h1>
-                                <span>Categories</span>
+                                <h1><?php echo $obj->get_total_rows('tbl_faculty',$conn); ?></h1>
+                                <span>Faculties</span>
                             </div>
                         </a>
                         
                         <a href="<?php echo SITEURL; ?>admin/index.php?page=questions">
                             <div class="dash-tile">
-                                <h1>1500</h1>
+                                <h1><?php echo $obj->get_total_rows('tbl_question',$conn); ?></h1>
                                 <span>Questions</span>
                             </div>
                         </a>

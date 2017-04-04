@@ -52,21 +52,21 @@
         }
         break;
         
-        case "categories":
+        case "faculties":
         {
-            include('categories.php');
+            include('faculties.php');
         }
         break;
         
-        case "add_category":
+        case "add_faculty":
         {
-            include('add_category.php');
+            include('add_faculty.php');
         }
         break;
         
-        case "update_category":
+        case "update_faculty":
         {
-            include('update_category.php');
+            include('update_faculty.php');
         }
         break;
         
@@ -97,6 +97,23 @@
         case "view_result":
         {
             include('view_result.php');
+        }
+        break;
+        
+        case "settings":
+        {
+            include('settings.php');
+        }
+        break;
+        
+        case "logout":
+        {
+            if(isset($_SESSION['user']))
+            {
+                unset($_SESSION['user']);
+            header('location:'.SITEURL.'admin/login.php');
+            }
+            
         }
         break;
         

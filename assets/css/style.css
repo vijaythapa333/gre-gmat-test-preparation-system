@@ -144,10 +144,21 @@ Version: 1.0
     margin-bottom: 2%;
 }
 .main .content .report .forms input[type='text'],.main .content .report .forms input[type='email'],
-.main .content .report .forms input[type='tel'],.main .content .report .forms input[type='num']{
+.main .content .report .forms input[type='tel'],.main .content .report .forms input[type='number'],
+.main .content .report .forms input[type='password']{
     padding: 0.5%;
     width: 30%;
 }
+.note{
+    color: black;
+    font-size: 90%;
+}
+.main .content .report .forms textarea{
+    width: 30%;
+    height: 100px;
+    padding: 0.5%;
+}
+
 .main .content .report .forms select{
     width: 31.5%;
     padding: 1%;
