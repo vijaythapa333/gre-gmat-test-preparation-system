@@ -10,6 +10,11 @@
                             echo $_SESSION['success'];
                             unset($_SESSION['success']);
                         }
+                        if(isset($_SESSION['fail']))
+                        {
+                            echo $_SESSION['fail'];
+                            unset($_SESSION['fail']);
+                        }
                     ?>
                     
                     <div class="clearfix">

@@ -27,6 +27,19 @@
             }
             return $query;
         }
+        public function select_random_row($tbl_name,$where,$limit)
+        {
+            $query="SELECT * FROM $tbl_name";
+            if($where!="")
+            {
+                $query.=" WHERE $where  ORDER BY RAND()";
+            }
+            if($limit!="")
+            {
+                $query.=' LIMIT '.$limit;
+            }
+            return $query;
+        }
         public function insert_data($tbl_name,$data)
         {
             $query="INSERT INTO $tbl_name SET $data";

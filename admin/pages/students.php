@@ -16,6 +16,11 @@
                             echo $_SESSION['update'];
                             unset($_SESSION['update']);
                         }
+                        if(isset($_SESSION['delete']))
+                        {
+                            echo $_SESSION['delete'];
+                            unset($_SESSION['delete']);
+                        }
                     ?>
                     <table>
                         <tr>
@@ -56,7 +61,7 @@
                                     <td><?php echo $is_active; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>admin/index.php?page=update_student&student_id=<?php echo $student_id; ?>"><button type="button" class="btn-update">UPDATE</button></a> 
-                                        <a href="#"><button type="button" class="btn-delete">DELETE</button></a>
+                                        <a href="<?php echo SITEURL; ?>admin/pages/delete.php?id=<?php echo $student_id; ?>&page=students"><button type="button" class="btn-delete" onclick="return confirm('Are you sure?')">DELETE</button></a>
                                     </td>
                                 </tr>
                                 <?php
