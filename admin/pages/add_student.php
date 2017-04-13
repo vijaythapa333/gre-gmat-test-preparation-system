@@ -43,9 +43,29 @@
                         
                         <span class="name">Faculty</span>
                         <select name="faculty">
-                            <option value="GRE">GRE</option>
-                            <option value="GMAT">GMAT</option>
-                            <option value="TOEFL">TOEFL</option>
+                            <?php 
+                                //Get Faculty from database
+                                $tbl_name="tbl_faculty";
+                                $where="is_active='yes'";
+                                $query=$obj->select_data($tbl_name,$where);
+                                $res=$obj->execute_query($conn,$query);
+                                $count_rows=$obj->num_rows($res);
+                                if($count_rows>0)
+                                {
+                                    while($row=$obj->fetch_data($res))
+                                    {
+                                        $faculty_id=$row['faculty_id'];
+                                        $faculty_name=$row['faculty_name'];
+                                        ?>
+                                        <option value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
+                                        <?php
+                                    }
+                                }
+                                else
+                                {
+                                    echo("<option value='none'>NONE</option>");
+                                }
+                            ?>
                         </select>
                         <br />
                         

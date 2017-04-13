@@ -57,7 +57,14 @@
                                     <td><?php echo $full_name; ?></td>
                                     <td><?php echo $email; ?></td>
                                     <td><?php echo $contact; ?></td>
-                                    <td><?php echo $faculty; ?></td>
+                                    <td>
+                                        <?php 
+                                            //Get FAculty Name from faculty_id
+                                            $tbl_name2="tbl_faculty";
+                                            $faculty_name=$obj->get_facultyname($tbl_name2,$faculty,$conn); 
+                                            echo $faculty_name;
+                                        ?>
+                                    </td>
                                     <td><?php echo $is_active; ?></td>
                                     <td>
                                         <a href="<?php echo SITEURL; ?>admin/index.php?page=update_student&student_id=<?php echo $student_id; ?>"><button type="button" class="btn-update">UPDATE</button></a> 

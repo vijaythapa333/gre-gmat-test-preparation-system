@@ -75,9 +75,30 @@
                         
                         <span class="name">Faculty</span>
                         <select name="faculty">
-                            <option <?php if($faculty=='GRE'){echo "selected='selected'";} ?> value="GRE">GRE</option>
-                            <option <?php if($faculty=='GMAT'){echo "selected='selected'";} ?> value="GMAT">GMAT</option>
-                            <option <?php if($faculty=='TOEFL'){echo "selected='selected'";} ?> value="TOEFL">TOEFL</option>
+                            <?php 
+                                //Get Faculties from database
+                                $tbl_name="tbl_faculty";
+                                $query=$obj->select_data($tbl_name);
+                                $res=$obj->execute_query($conn,$query);
+                                $count_rows=$obj->num_rows($res);
+                                if($count_rows>0)
+                                {
+                                    while($row=$obj->fetch_data($res))
+                                    {
+                                        $faculty_id=$row['faculty_id'];
+                                        $faculty_name=$row['faculty_name'];
+                                        ?>
+                                        <option <?php if($faculty==$faculty_id){echo"selected='selected'";} ?> value="<?php echo $faculty_id; ?>"><?php echo $faculty_name; ?></option>
+                                        <?php
+                                    }
+                                }
+                                else
+                                {
+                                    ?>
+                                    <option value="0">Uncategorized</option>
+                                    <?php
+                                }
+                            ?>
                         </select>
                         <br />
                         

@@ -30,7 +30,7 @@
                         $count_rows=$obj->num_rows($res);
                         if($count_rows>0)
                         {
-                            $_SESSION['user']=$username;
+                            $_SESSION['student']=$username;
                             $_SESSION['login']="<div class='success'>Login Successful.</div>";
                             header('location:'.SITEURL.'index.php?page=welcome');
                         }

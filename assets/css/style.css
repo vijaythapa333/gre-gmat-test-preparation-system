@@ -82,6 +82,14 @@ Version: 1.0
     font-size: 120%;
     line-height: 50px;
 }
+.main .content .welcome .ques{
+    text-align: left;
+}
+.main .content .welcome .radio-ans{
+    font-size: 90%;
+    line-height: 35px;
+}
+
  .heavy{
     color: #b73a00;
     font-weight: bold;

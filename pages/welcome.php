@@ -12,7 +12,7 @@
                             unset($_SESSION['login']);
                         }
                     ?>
-                    Hello <span class="heavy"><?php echo $_SESSION['user']; ?></span>. Welcome to Test Preparation Portal.<br />
+                    Hello <span class="heavy"><?php echo $_SESSION['student']; ?></span>. Welcome to Test Preparation Portal.<br />
                     <a href="<?php echo SITEURL; ?>index.php?page=question">
                         <button type="button" class="btn-go">Take a Test</button>
                     </a>

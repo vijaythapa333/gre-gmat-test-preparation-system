@@ -111,5 +111,31 @@
             $rows=mysqli_num_rows($res);
             return $rows;
         }
+        public function get_userid($tbl_name,$username,$conn)
+        {
+            $query="SELECT student_id FROM $tbl_name WHERE username='$username'";
+            $res=mysqli_query($conn,$query) or die(mysqli_error($conn));
+            $row=mysqli_fetch_assoc($res);
+            $student_id=$row['student_id'];
+            return $student_id;
+        }
+        public function get_fullname($tbl_name,$student_id,$conn)
+        {
+            $query="SELECT first_name,last_name FROM $tbl_name WHERE student_id='$student_id'";
+            $res=mysqli_query($conn,$query) or die(mysqli_error($conn));
+            $row=mysqli_fetch_assoc($res);
+            $first_name=$row['first_name'];
+            $last_name=$row['last_name'];
+            $full_name=$first_name.' '.$last_name;
+            return $full_name;
+        }
+        public function get_facultyname($tbl_name,$faculty_id,$conn)
+        {
+            $query="SELECT faculty_name FROM $tbl_name WHERE faculty_id='$faculty_id'";
+            $res=mysqli_query($conn,$query) or die(mysqli_error($conn));
+            $row=mysqli_fetch_assoc($res);
+            $faculty_name=$row['faculty_name'];
+            return $faculty_name;
+        }
     }
 ?>

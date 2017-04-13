@@ -42,7 +42,7 @@
                         
                         <a href="<?php echo SITEURL; ?>admin/index.php?page=results">
                             <div class="dash-tile">
-                                <h1>150</h1>
+                                <h1><?php echo $obj->get_total_rows('tbl_result_summary',$conn); ?></h1>
                                 <span>Results</span>
                             </div>
                         </a>
