@@ -26,6 +26,12 @@
                         <span class="name">Questions/Set</span>
                         <input type="text" name="qns_per_page" placeholder="Total Questions Per Page" required="true" /><br />
                         
+                        <span class="name">Total English Qns</span>
+                        <input type="number" name="total_english_qns" placeholder="Total Number of English Questions" required="true" /><br />
+                        
+                        <span class="name">Total Math Qns</span>
+                        <input type="number" name="total_math_qns" placeholder="Total Number of Math Questions" /><br />
+                        
                         <span class="name">Is Active?</span>
                         <input type="radio" name="is_active" value="yes" /> Yes 
                         <input type="radio" name="is_active" value="no" /> No
@@ -45,6 +51,8 @@
                             $faculty_name=$obj->sanitize($conn,$_POST['faculty_name']);
                             $time_duration=$obj->sanitize($conn,$_POST['time_duration']);
                             $qns_per_page=$obj->sanitize($conn,$_POST['qns_per_page']);
+                            $total_english=$obj->sanitize($conn,$_POST['total_english_qns']);
+                            $total_math=$obj->sanitize($conn,$_POST['total_math_qns']);
                             if(isset($_POST['is_active']))
                             {
                                 $is_active=$obj->sanitize($conn,$_POST['is_active']);
@@ -66,6 +74,8 @@
                             $data="faculty_name='$faculty_name',
                                     time_duration='$time_duration',
                                     qns_per_set='$qns_per_page',
+                                    total_english='$total_english',
+                                    total_math='$total_math',
                                     is_active='$is_active',
                                     added_date='$added_date',
                                     updated_date=''";

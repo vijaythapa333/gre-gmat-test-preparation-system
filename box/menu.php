@@ -8,6 +8,7 @@
 <!--Navigation Starts Here-->
         <nav class="menu">
             <div class="wrapper">
+                
                 <ul>
                     <a href="<?php echo SITEURL; ?>admin/index.php?page=home"><li>Home</li></a>
                     <a href="<?php echo SITEURL; ?>admin/index.php?page=students"><li>Students</li></a>
@@ -15,7 +16,7 @@
                     <a href="<?php echo SITEURL; ?>admin/index.php?page=questions"><li>Questions</li></a>
                     <a href="<?php echo SITEURL; ?>admin/index.php?page=results"><li>Results</li></a>
                     <a href="<?php echo SITEURL; ?>admin/index.php?page=settings"><li>Settings</li></a>
-                    <a href="<?php echo SITEURL; ?>admin/index.php?page=logout"><li>Log Out</li></a>
+                    <a href="<?php echo SITEURL; ?>admin/index.php?page=logout" onclick="return confirm('Are you sure?')"><li>Log Out</li></a>
                 </ul>
             </div>
         </nav>

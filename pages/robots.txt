@@ -1,0 +1,5 @@
+User-Agent: *
+User-agent: Googlebot
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /assets/

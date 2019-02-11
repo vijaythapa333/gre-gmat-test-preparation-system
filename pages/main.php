@@ -34,8 +34,15 @@
         }
         break;
         
+        case "detail_result":
+        {
+            include('detail_result.php');
+        }
+        break;
+        
         case "logout":
         {
+            /*
             if(isset($_SESSION['totalScore']))
             {
                 $totalScore=$_SESSION['totalScore'];
@@ -57,6 +64,11 @@
                     ";
             $query=$obj->insert_data($tbl_name2,$data);
             $res=$obj->execute_query($conn,$query);
+            */
+            $tbl_name="tbl_student";
+            $username=$_SESSION['student'];
+            $student_id=$obj->get_userid($tbl_name,$username,$conn);
+            $res=true;
             if($res==true)
             {
                 //Setting Student Is_Active Mode to No

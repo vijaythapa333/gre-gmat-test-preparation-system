@@ -24,7 +24,7 @@
                         }
                         //Now Getting VAlues Based on aded date and student id
                         $tbl_name="tbl_result";
-                        $where="student_id='$student_id' AND added_date='$added_date'";
+                        $where="student_id='$student_id' && added_date='$added_date'";
                         $query=$obj->select_data($tbl_name,$where);
                         $res=$obj->execute_query($conn,$query);
                         $sn=1;
@@ -34,6 +34,7 @@
                             $question_id=$row['question_id'];
                             $user_answer=$row['user_answer'];
                             $right_answer=$row['right_answer'];
+                            
                             $added_date=$row['added_date'];
                             //Get all the question and answers detail
                             $tbl_name2="tbl_question";
@@ -46,10 +47,14 @@
                             $second_answer=$row2['second_answer'];
                             $third_answer=$row2['third_answer'];
                             $fourth_answer=$row2['fourth_answer'];
+                            $fifth_answer=$row2['fifth_answer'];
+                            $reason=$row2['reason'];
                             ?>
                             <label style="font-weight: bold;"><?php echo $sn++.'. '.$question; ?></label><br />
                             <?php 
                                 //To get usersAnswer
+                                
+                                //Using Switch Case
                                 switch($user_answer)
                                 {
                                     case 0:
@@ -76,6 +81,11 @@
                                     case 4:
                                     {
                                         $userAnswer=$fourth_answer;
+                                    }
+                                    break;
+                                    case 5:
+                                    {
+                                        $userAnswer=$fifth_answer;
                                     }
                                     break;
                                 }
@@ -108,6 +118,11 @@
                                         $rightAnswer=$fourth_answer;
                                     }
                                     break;
+                                    case 5:
+                                    {
+                                        $rightAnswer=$fifth_answer;
+                                    }
+                                    break;
                                 }
                             ?>
                             <label>Users Answer: </label>
@@ -125,9 +140,17 @@
                                     <?php
                                 }
                             ?>
+                            
                             <br />
                             <label>Correct Answer:</label><label style="color: green;"><?php echo $rightAnswer; ?></label><br />
                             
+                            
+                                <?php 
+                                    if($reason!="")
+                                    {
+                                        echo "<div class='success'>".$reason."</div>";
+                                    }
+                                ?>
                             <hr />
                             <?php
                         }

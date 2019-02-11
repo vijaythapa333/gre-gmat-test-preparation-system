@@ -53,7 +53,7 @@
                                     ?>
                                     <tr>
                                         <td><?php echo $sn++; ?>. </td>
-                                        <td><?php echo $question; ?></td>
+                                        <td style="width: 650px;"><?php echo $question; ?></td>
                                         <td><?php echo $answer; ?></td>
                                         <td><?php echo $faculty; ?></td></td>
                                         <td><?php echo $is_active; ?></td>

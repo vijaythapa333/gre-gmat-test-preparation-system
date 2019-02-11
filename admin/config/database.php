@@ -119,6 +119,14 @@
             $student_id=$row['student_id'];
             return $student_id;
         }
+        public function get_faculty($tbl_name,$student_id,$conn)
+        {
+            $query="SELECT faculty FROM $tbl_name WHERE student_id='$student_id'";
+            $res=mysqli_query($conn,$query) or die(mysqli_error($conn));
+            $row=mysqli_fetch_assoc($res);
+            $faculty=$row['faculty'];
+            return $faculty;
+        }
         public function get_fullname($tbl_name,$student_id,$conn)
         {
             $query="SELECT first_name,last_name FROM $tbl_name WHERE student_id='$student_id'";

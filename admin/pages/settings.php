@@ -32,9 +32,10 @@
         <div class="main">
             <div class="content">
                 <div class="report">
-                    
+                    <!--
                     <form method="post" action="" class="forms">
                         <h2>Update App Details</h2>
+                        -->
                         <?php 
                             if(isset($_SESSION['update']))
                             {
@@ -57,7 +58,7 @@
                                 unset($_SESSION['not_match']);
                             }
                         ?>
-                        
+                        <!--
                         <span class="name">App Name</span>
                         <input type="text" name="app_name" value="<?php echo $app_name; ?>" required="true" /><br />
                         
@@ -80,6 +81,7 @@
                         <a href="<?php echo SITEURL; ?>admin/index.php"><button type="button" class="btn-delete">Cancel</button></a>
                     </form>
                     <hr />
+                    -->
                     <?php 
                         if(isset($_POST['submit']))
                         {
@@ -132,14 +134,15 @@
                     <form method="post" action="" class="forms">
                         <h2>Change Password</h2>
                         
+                        <span class="name">Current Password</span>
+                        <input type="password" name="current_password" placeholder="Current Password" required="true" /><br />
+                        
                         <span class="name">New Password</span>
                         <input type="password" name="new_password" placeholder="New Password" required="true" /><br />
                         
                         <span class="name">Confirm Password</span>
                         <input type="password" name="confirm_password" placeholder="Confirm Password" required="true" /><br />
                         
-                        <span class="name">Current Password</span>
-                        <input type="password" name="current_password" placeholder="Current Password" required="true" /><br />
                         
                         <input type="submit" name="update" value="Update Password" class="btn-update" style="margin-left: 15%;" />
                         <a href="<?php echo SITEURL; ?>admin/index.php"><button type="button" class="btn-delete">Cancel</button></a>
@@ -150,9 +153,9 @@
                         {
                             //echo "Clicked";
                             //Get Details from forms
-                            $new_password=$obj->sanitize($conn,$_POST['new_password']);
-                            $confirm_password=$obj->sanitize($conn,$_POST['confirm_password']);
-                            $current_password=$obj->sanitize($conn,$_POST['current_password']);
+                            $new_password=md5($obj->sanitize($conn,$_POST['new_password']));
+                            $confirm_password=md5($obj->sanitize($conn,$_POST['confirm_password']));
+                            $current_password=md5($obj->sanitize($conn,$_POST['current_password']));
                             if($current_password==$password)
                             {
                                 if($new_password==$confirm_password)

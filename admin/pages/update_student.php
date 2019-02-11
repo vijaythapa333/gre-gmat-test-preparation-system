@@ -62,7 +62,7 @@
                         <input type="text" name="username" value="<?php echo $username; ?>" required="true" /><br />
                         
                         <span class="name">Password</span>
-                        <input type="text" name="password" value="<?php echo $password; ?>" /><br />
+                        <input type="text" name="password" value="<?php echo $password; ?>" required="true" /><br />
                         
                         <span class="name">Contact</span>
                         <input type="tel" name="contact" value="<?php echo $contact; ?>" /><br />

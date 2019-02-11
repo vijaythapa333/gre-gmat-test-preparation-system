@@ -4,7 +4,13 @@
                 <div class="report">
                     <h2>Result Manager</h2>
                     <!--<button type="button" class="btn-add">Add User</button>-->
-                
+                    <?php 
+                        if(isset($_SESSION['delete']))
+                        {
+                            echo $_SESSION['delete'];
+                            unset($_SESSION['delete']);
+                        }
+                    ?>
                     <table>
                         <tr>
                             <th>S.N.</th>
@@ -12,7 +18,6 @@
                             <th>Date</th>
                             <th>Mark</th>
                             <th>Faculty</th>
-                            <th>Remark</th>
                             <th>Actions</th>
                         </tr>
                         
@@ -42,11 +47,18 @@
                                         </td>
                                         <td><?php echo $added_date; ?></td>
                                         <td><?php echo $marks; ?></td>
-                                        <td>GRE</td>
-                                        <td>Pass</td>
+                                        <td>
+                                            <?php 
+                                                //Get FAculty from STudent ID
+                                                $tbl="tbl_student";
+                                                $tbl2="tbl_faculty";
+                                                $faculty=$obj->get_faculty($tbl,$student_id,$conn);
+                                                echo $faculty_name=$obj->get_facultyname($tbl2,$faculty,$conn);
+                                            ?>
+                                        </td>
                                         <td>
                                             <a href="<?php echo SITEURL; ?>admin/index.php?page=view_result&student_id=<?php echo $student_id; ?>&added_date=<?php echo $added_date; ?>"><button type="button" class="btn-update">VIEW</button></a> 
-                                            <a href="#"><button type="button" class="btn-delete">DELETE</button></a>
+                                            <a href="<?php echo SITEURL; ?>admin/pages/delete_result.php?summary_id=<?php echo $summary_id; ?>&student_id=<?php echo $student_id; ?>&added_date=<?php echo $added_date; ?>"><button type="button" class="btn-delete">DELETE</button></a>
                                         </td>
                                     </tr>
                                     <?php

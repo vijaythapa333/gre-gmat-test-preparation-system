@@ -35,7 +35,7 @@
                     {
                         //echo "Clicked";
                         $username=$obj->sanitize($conn,$_POST['username']);
-                        $password_db=$obj->sanitize($conn,$_POST['password']);
+                        $password_db=md5($obj->sanitize($conn,$_POST['password']));
                         
                         if(($username=="")or($password=""))
                         {
