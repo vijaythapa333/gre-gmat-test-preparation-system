@@ -12,15 +12,24 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 
 ### A. Users (Students) Can 
 
+1. Take Exams (Username & Password provided by Admin)
+2. After login, Student will see the "Rules for Taking Exam"
+
+**Rules are**
+1. Once you click on "Take Exam" button, the exam will begin and count down begins
+2. Questions are selected randomly **(*If a student gets a question on no.1, another student might get the same question on different position or might not get the question at all*)**
+3. You'll have to select an option and click on "Next" button to get another question.
+4. You cannot go back to the previous question, Once 'Next' button is clicked.
+5. If you close the window or click on "Quit" button, the session will be completed and you will be logged out. Then you won't have permission to log in again and take the exam. **(*You'll have to contact administrators to grant you permission to take the exam again*).**
+6. After the exam is completed, you will get the results immediately and can also check the detail result view **(*You can see the answers you've selected to the questions and can also see the reason for that answer to be right.*).**
 
 ### B. Admins Can
 
-1. Manage Admins
-2. Manage Students
-3. Manage Questions
-4. Manage Facculties
-5. One-Time Exam for Students
-6. On-The-Spot Result Generation (Score)
+1. Manage Admin Credentials 
+2. Manage Students (Create New, Update and Delete Existing Ones)
+3. Manage Questions 
+4. Manage Faculties
+5. Manage the Results of the Students.
 7. Display the Wright and Wrong Answers with Detail Reasons.
 
 
@@ -54,8 +63,8 @@ Local Disc C: -> xampp -> htdocs -> 'this project'
 4. Extract and Import Database
 
 a. Open 'phpmyadmin' in your browser
-b. Create a Database ('mlb2018')
-c. Import the SQL file provided with this project ('mlb2018')
+b. Create a Database ('quizapp')
+c. Import the SQL file provided with this project ('quizapp')
 
 5. Make Changes to settings
 
@@ -69,9 +78,9 @@ session_start();
 define('LOCALHOST', 'localhost');
 define('USERNAME', 'root'); //Your Database username instead of 'root'
 define('PASSWORD', ''); //Your Database Password instead of null/empty
-define('DBNAME', 'mlb2018'); //Your Database Name if it's not 'mlb2018'
+define('DBNAME', 'quizapp'); //Your Database Name if it's not 'quizapp'
 
-define('SITEURL', 'http://localhost/phpmultilingualblog/'); //Update the home URL of the project if you have changed port number or it's live on server
+define('SITEURL', 'http://localhost/name_of_project_folder/'); //Update the home URL of the project if you have changed port number or it's live on server
 
 ?>
 ```
@@ -84,10 +93,14 @@ This is a very simple Content Management System (No advanced stuffs).
 
 **Instructions to use**
 1. Go to the link -> yourhomeurl/admin  
->e.g. *http://localhost:81/phpmultilingualblog/admin*
+>e.g. *http://localhost:81/name-of-project-folder/admin*
 2. Login with the Username and Password 
 >*[Username: admin, Password: admin]*
 3. Hola! You're logged in. Now you can manage categories, posts and users.
+
+
+## Project Limitation & Strategy to make it Successful 
+[Detail Report](https://www.linkedin.com/pulse/why-projects-fail-vijay-thapa/ "Why this is failuure project and ways to make it successful.")
 
 
 ## For Sponsor or Projects Enquiry
