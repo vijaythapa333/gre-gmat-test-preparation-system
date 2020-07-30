@@ -14,6 +14,7 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 
 1. Take Exams (Username & Password provided by Admin)
 2. After login, Student will see the "Rules for Taking Exam"
+3. After the exam is completed, you will get the results immediately and can also check the detail result view **(*You can see the answers you've selected to the questions and can also see the reason for that answer to be right.*).**
 
 **Rules are**
 1. Once you click on "Take Exam" button, the exam will begin and count down begins
@@ -21,7 +22,7 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 3. You'll have to select an option and click on "Next" button to get another question.
 4. You cannot go back to the previous question, Once 'Next' button is clicked.
 5. If you close the window or click on "Quit" button, the session will be completed and you will be logged out. Then you won't have permission to log in again and take the exam. **(*You'll have to contact administrators to grant you permission to take the exam again*).**
-6. After the exam is completed, you will get the results immediately and can also check the detail result view **(*You can see the answers you've selected to the questions and can also see the reason for that answer to be right.*).**
+
 
 ### B. Admins Can
 
