@@ -101,7 +101,7 @@ This is a very simple Content Management System (No advanced stuffs).
 
 
 ## Project Limitation & Strategy to make it Successful 
-[Click Here for Detail Report](https://www.linkedin.com/pulse/why-projects-fail-vijay-thapa/ "Why this is failuure project and ways to make it successful.")
+[Click Here for Detail Report](https://www.linkedin.com/pulse/why-projects-fail-vijay-thapa/ "Strategies to Make your project successful.")
 
 
 ## For Sponsor or Projects Enquiry
