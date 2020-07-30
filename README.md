@@ -5,7 +5,7 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 
 ## Technologies Used
 1. Front-End (HTML5, CSS3, JS)
-2. Backend (PHP OOP)
+2. Backend (PHP - OOP)
 3. Database (MySQLi)
 
 ## Features of this Project
