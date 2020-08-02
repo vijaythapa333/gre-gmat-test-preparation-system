@@ -63,9 +63,9 @@ Local Disc C: -> xampp -> htdocs -> 'this project'
 
 4. Extract and Import Database
 
-a. Open 'phpmyadmin' in your browser
-b. Create a Database ('quizapp')
-c. Import the SQL file provided with this project ('quizapp')
+- Open 'phpmyadmin' in your browser
+- Create a Database ('quizapp')
+- Import the SQL file provided with this project ('quizapp')
 
 5. Make Changes to settings
 
