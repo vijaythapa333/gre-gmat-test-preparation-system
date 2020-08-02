@@ -147,7 +147,7 @@
                         }
                     ?>
                         <a href="<?php echo SITEURL; ?>index.php?page=logout">
-                            <button type="button" class="btn-add">Log Out</button>
+                            <button type="button" class="btn-exit">Log Out</button>
                         </a>
                     
                     
