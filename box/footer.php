@@ -2,8 +2,8 @@
         <footer class="footer">
             <div class="wrapper">
                 <p>
-                    <a href="#" title="Beyond Boundaries">Beyond Boundaries</a> &copy; <?php echo date('Y'); ?>. All Rights Reserved.    
-                    Powered by <a href="http://onlinezeal.com/" title="Online Zeal" target="_blank">Online Zeal</a>.
+                    <a href="https://www.youtube.com/vijaythapa?sub_confirmation=1/" title="ABC Institutes">ABC Institute</a> &copy; <?php echo date('Y'); ?>. All Rights Reserved.    
+                    Powered by <a href="https://www.youtube.com/vijaythapa?sub_confirmation=1/" title="Vijay Thapa" target="_blank">Vijay Thapa</a>.
                 </p>
             </div>
         </footer>
