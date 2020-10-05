@@ -38,6 +38,10 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 1. Subscribe & Share my YouTube Channel - https://bit.ly/vijay-thapa-online-courses
 2. Add a Star 🌟  to this 👆 Repository
 
+## Donate
+
+**Donate by wire transfer:** contact *donate@vijaythapa.com* for wire transfer details. 
+
 
 
 ## How to Install and Run this project?
