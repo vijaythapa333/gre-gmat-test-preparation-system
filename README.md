@@ -54,7 +54,7 @@ And if you like this project then ADD a STAR ⭐️  to this project 👆
 
 2. Install any Text Editor (Sublime Text or Visual Studio Code or Atom or Brackets)
 
-### Installtion
+### Installation
 
 1. Download as as Zip or Clone this project
 2. Extract and Move this project to Root Directory
