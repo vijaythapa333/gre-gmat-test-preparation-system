@@ -76,8 +76,6 @@ Local Disc C: -> xampp -> htdocs -> 'this project'
 Go to 'admin' folder then'config' folder and Open 'constants.php' file. Then make changes on following constants
 ```php
 <?php 
-//Start Session
-session_start();
 
 //Create Constants to save Database Credentials
 define('LOCALHOST', 'localhost');
