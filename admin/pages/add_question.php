@@ -134,7 +134,7 @@
                                 }
                                 //Uploading if the file is valid
                                 //first changing image name
-                                $new_name='Beyond_Boundaries_Question_'.$obj->uniqid();
+                                $new_name='Exam_Question_Vijay_Thapa_'.$obj->uniqid();
                                 $image_name=$new_name.'.'.$ext;
                                 //Adding Watermark to the image fie too
                                 $source=$_FILES['image']['tmp_name'];

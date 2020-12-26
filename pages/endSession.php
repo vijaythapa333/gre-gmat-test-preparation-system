@@ -62,6 +62,10 @@
                         {
                             $marksShown=200+round($obtainedPercent*6);
                         }
+                        else
+                        {
+                            $marksShown=$obtainedMarks;
+                        }
                         
                         $_SESSION['USERID']= $userid;
                         //Round Off Marks
