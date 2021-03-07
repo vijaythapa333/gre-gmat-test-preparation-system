@@ -1,5 +1,5 @@
 <?php 
-    define('SITEURL','http://localhost:81/quizapp/');
+    define('SITEURL','http://localhost/gre-gmat-test-preparation-system/');
     define('LOCALHOST','localhost');
     define('USERNAME','root');
     define('PASSWORD','');
