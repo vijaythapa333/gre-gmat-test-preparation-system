@@ -3,12 +3,12 @@
     <head>
         <!--Meta Tags Starts Here-->
         <meta charset="UTF-8" />
-        <meta name="author" content="Beyond Boundaries" />
-        <meta name="description" content="Test Preparation Portal For Beyond Boundaries." />
-        <meta name="keywords" content="Test Preaparation, Beyond Boundaries, Online Portal, Kathmandu, Nepal" />
+        <meta name="author" content="Vijay Thapa - Online Examination System" />
+        <meta name="description" content="Test Preparation Portal by Vijay Thapa." />
+        <meta name="keywords" content="Test Preaparation, Online Portal, Online Exam System, Vijay Thapa, Kathmandu, Nepal" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <!--Meta Tags Ends Here-->
-        <title>Online Test Preparation Portal - Beyond Boundaries</title>
+        <title>Online Examination System - Vijay Thapa</title>
         
         <!--COUNT DOWN TIMER STARTS HERE-->
         <script src="<?php echo SITEURL; ?>/assets/js/countdown/jquery.js"></script>
@@ -33,7 +33,7 @@
         <header class="header">
             <div class="wrapper clearfix">
                 <div class="logo">
-                    <img src="<?php echo SITEURL; ?>/images/logo.jpg" alt="Beyond Boundaries" title="Beyond Boundaries" />
+                    <img src="<?php echo SITEURL; ?>/images/logo.jpg" alt="Vijay Thapa" title="Online Examination System - Vijay Thapa" />
                 </div>
                 
                 <div class="head-title">
